@@ -1,0 +1,80 @@
+{
+  "doctype": "DocType",
+  "name": "AlphaX Doc Reader Settings",
+  "module": "AlphaX Document Reader",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "autoname": "Single",
+  "title_field": "",
+  "fields": [
+    {
+      "fieldname": "enable_image_ocr",
+      "fieldtype": "Check",
+      "label": "Enable Image OCR (requires pytesseract/easyocr)",
+      "default": 0
+    },
+    {
+      "fieldname": "enable_pdf_ocr_fallback",
+      "fieldtype": "Check",
+      "label": "Enable PDF OCR Fallback (scanned PDFs)",
+      "default": 0
+    },
+    {
+      "fieldname": "section_llm",
+      "fieldtype": "Section Break",
+      "label": "LLM Parsing (Optional)"
+    },
+    {
+      "fieldname": "enable_openai",
+      "fieldtype": "Check",
+      "label": "Enable OpenAI",
+      "default": 0
+    },
+    {
+      "fieldname": "openai_api_key",
+      "fieldtype": "Password",
+      "label": "OpenAI API Key"
+    },
+    {
+      "fieldname": "openai_model",
+      "fieldtype": "Data",
+      "label": "OpenAI Model",
+      "default": "gpt-4o-mini"
+    },
+    {
+      "fieldname": "enable_gemini",
+      "fieldtype": "Check",
+      "label": "Enable Google Gemini",
+      "default": 0
+    },
+    {
+      "fieldname": "gemini_api_key",
+      "fieldtype": "Password",
+      "label": "Gemini API Key"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 1,
+      "print": 1,
+      "email": 1
+    }
+  ],
+  "actions": [],
+  "links": [],
+  "states": [],
+  "allow_rename": 0,
+  "allow_copy": 0,
+  "track_changes": 1
+}

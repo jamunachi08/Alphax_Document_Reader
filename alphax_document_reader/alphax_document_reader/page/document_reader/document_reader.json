@@ -1,0 +1,12 @@
+{
+  "doctype": "Page",
+  "name": "document-reader",
+  "module": "AlphaX Document Reader",
+  "title": "Document Reader",
+  "published": 0,
+  "roles": [
+    {
+      "role": "System Manager"
+    }
+  ]
+}

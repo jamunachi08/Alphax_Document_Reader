@@ -1,0 +1,97 @@
+{
+  "doctype": "DocType",
+  "name": "AlphaX Document",
+  "module": "AlphaX Document Reader",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "autoname": "hash",
+  "title_field": "title",
+  "fields": [
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "label": "Title",
+      "reqd": 0
+    },
+    {
+      "fieldname": "file",
+      "fieldtype": "Attach",
+      "label": "Document File",
+      "reqd": 1
+    },
+    {
+      "fieldname": "file_type",
+      "fieldtype": "Data",
+      "label": "File Type",
+      "read_only": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nQueued\nProcessing\nExtracted\nFailed",
+      "default": "Draft",
+      "read_only": 0
+    },
+    {
+      "fieldname": "pages",
+      "fieldtype": "Int",
+      "label": "Pages",
+      "read_only": 1
+    },
+    {
+      "fieldname": "extracted_text",
+      "fieldtype": "Long Text",
+      "label": "Extracted Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "reference_doctype",
+      "fieldtype": "Link",
+      "label": "Reference DocType",
+      "options": "DocType"
+    },
+    {
+      "fieldname": "reference_name",
+      "fieldtype": "Dynamic Link",
+      "label": "Reference Name",
+      "options": "reference_doctype"
+    },
+    {
+      "fieldname": "extracted_on",
+      "fieldtype": "Datetime",
+      "label": "Extracted On",
+      "read_only": 1
+    },
+    {
+      "fieldname": "error",
+      "fieldtype": "Long Text",
+      "label": "Error",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 1,
+      "print": 1,
+      "email": 1
+    }
+  ],
+  "actions": [],
+  "links": [],
+  "states": [],
+  "allow_rename": 0,
+  "allow_copy": 0,
+  "track_changes": 1
+}

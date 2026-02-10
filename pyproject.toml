@@ -1,0 +1,31 @@
+[project]
+name = "alphax_document_reader"
+authors = [
+  { name = "AlphaX", email = "erpsupport@alphax.com" }
+]
+description = "AlphaX Document Reader: ingest & extract text from PDF, images, Office docs and spreadsheets, with optional OCR/LLM parsing."
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+  # Frappe is installed/managed by bench; keep it out of runtime deps.
+  "pdfplumber",
+  "pdfminer-six",
+  "pandas",
+  "openpyxl>=3.1.0",
+  "python-docx",
+  "Pillow",
+  # Optional OCR backends (install if you need image/PDF OCR):
+  # "pytesseract",
+  # "easyocr",
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<16.0.0"
+erpnext = ">=15.0.0,<16.0.0"
+
+[tool.bench.dev-dependencies]
